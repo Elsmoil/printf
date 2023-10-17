@@ -6,6 +6,7 @@
  *
  * Return: the number of bytes printed
  */
+
 int (*get_specifier(char *s))(va_list ap, params_t *params)
 {
 	specifier_t specifiers[] = {
@@ -20,18 +21,18 @@ int (*get_specifier(char *s))(va_list ap, params_t *params)
 		{"x", print_hex},
 		{"X", print_HEX},
 		{"p", print_address},
-		{"s", print_s},
+		{"s", print_S},
 		{"r", print_rev},
 		{"R", print_rot13},
 		{NULL, NULL}
 	};
 	int i = 0;
 
-	while (specifier[i].specifier)
+	while (specifiers[i].specifier)
 	{
-		if (*s == specifier[i].specifier[0])
+		if (*s == specifiers[i].specifier[0])
 		{
-		return (specifier[i].f);
+		return (specifiers[i].f);
 		}
 	i++;
 	}
@@ -41,7 +42,7 @@ return (NULL);
 /**
  * get_print_func - finds the format func
  * @s: the format string
- * @ap: argumant pointer
+ * @ap: argument pointer
  * @params: the parameters struct
  *
  * Retuen: the number of bytes printed
@@ -54,7 +55,7 @@ int get_print_func(char *s, va_list ap, params_t *params)
 	if (f)
 		return (f(ap, params));
 	return (0);
-i}
+}
 
 /**
  * get_flag - find the flag func

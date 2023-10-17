@@ -6,6 +6,7 @@
  *
  * Return: void
  */
+
 int _puts(char *str)
 {
 	char *a = str;
