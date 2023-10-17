@@ -16,8 +16,7 @@
 #define PARAMS_INIT {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 
 #define CONVERT_LOWERCASE	1
-#define CONVERT_UNSIGNED 	2
-
+#define CONVERT_UNSIGNED	2
 /**
  * struct parameters - parameters struct
  *
@@ -32,8 +31,8 @@
  * @width: field width specified.
  * @precision: field precision specified.
  *
- * l_modifier: on if l_modifier is specified.
- * h_modifier: on if h_modifier is specified.
+ * @l_modifier: on if l_modifier is specified.
+ * @h_modifier: on if h_modifier is specified.
  */
 
 typedef struct parameters
