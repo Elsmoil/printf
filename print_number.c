@@ -96,9 +96,6 @@ int print_number_right_shift(char *str, params_t *params)
 		n += _putchar('-');
 	if (params->plus_flag && !neg2 && pad_char == ' ' && !params->unsign)
 		n += _putchar('+');
-<<<<<<< HEAD
-	else if (!params->plus_flag && params->space_flag && !neg2 && !params->unsign && !params->zero_flag)
-=======
 	else if (!params->plus_flag && params->space_flag && !neg2 &&
 		!params->unsign && !params->zero_flag)
 >>>>>>> fd6c4164dfa1ab96fc8adf2b72249d4b9f323d1b
