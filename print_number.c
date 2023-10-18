@@ -74,10 +74,6 @@ int print_number_right_shift(char *str, params_t *params)
 	neg = neg2 = (!params->unsign && *str == '-');
 	if (neg && i < params->width && pad_char == '0' && !params->minus_flag)
 		str++;
-<<<<<<< HEAD
-
-=======
->>>>>>> fd6c4164dfa1ab96fc8adf2b72249d4b9f323d1b
 	else
 		neg = 0;
 	if ((params->plus_flag && !neg2) ||
@@ -98,10 +94,8 @@ int print_number_right_shift(char *str, params_t *params)
 		n += _putchar('+');
 	else if (!params->plus_flag && params->space_flag && !neg2 &&
 		!params->unsign && !params->zero_flag)
->>>>>>> fd6c4164dfa1ab96fc8adf2b72249d4b9f323d1b
 		n += _putchar(' ');
 	n += _puts(str);
-
 	return (n);
 }
 
